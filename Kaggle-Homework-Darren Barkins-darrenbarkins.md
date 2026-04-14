@@ -96,7 +96,7 @@
 
 | Model | Type | CV Balanced Accuracy | Kaggle LB Score |
 |-------|------|----------------------|-----------------|
-| Random Forest | Bagging | 0.9553 ± 0.0026 | (fill in after submission) |
+| Random Forest | Bagging | 0.9553 ± 0.0026 | 0.95350 |
 | XGBoost | Boosting | | |
 
 ### Random Forest Notes:
