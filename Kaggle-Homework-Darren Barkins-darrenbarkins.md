@@ -144,4 +144,38 @@
 ---
 
 ## Phase 2 Plan
-...
+
+The next phase of modeling will focus on improving upon 
+the baseline scores achieved by the Random Forest and 
+XGBoost models. The following approaches are planned:
+
+### Feature Engineering
+- Explore creating new features by combining existing ones, 
+  such as a heat-wind index combining Temperature_C and 
+  Wind_Speed_kmh, since both were strong predictors of 
+  irrigation need. This was inspired by the top scoring 
+  notebook which used feature engineering to reach 0.970 
+  balanced accuracy.
+
+### Model Tuning
+- Tune the XGBoost hyperparameters more carefully, 
+  specifically the learning rate, max depth, and number 
+  of estimators, to see if performance can be pushed 
+  beyond the current 0.95987 leaderboard score.
+
+### Try Additional Models
+- Explore LightGBM and CatBoost as alternative boosting 
+  algorithms, as both were used in the top scoring 
+  notebook and may perform differently on this dataset.
+
+### Ensemble/Stacking
+- Combine the predictions of multiple models together 
+  into a stacked ensemble, which was the approach used 
+  by the highest scoring public notebook to achieve 
+  0.970 balanced accuracy.
+
+### Pseudo Labeling
+- Explore the pseudo labeling technique seen in one of 
+  the upvoted notebooks, where the model's most confident 
+  test set predictions are added back into the training 
+  data to give the model more examples to learn from.
