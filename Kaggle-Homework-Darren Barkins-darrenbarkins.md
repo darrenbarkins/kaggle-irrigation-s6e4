@@ -92,7 +92,11 @@
 
 ---
 
-## Modeling
+## Modeling Notebooks
+- Bagging (Random Forest): [S6E4 Irrigation Need - Random Forest](https://www.kaggle.com/code/darrenbarkins/s6e4-irrigation-need-random-forest)
+- Boosting (XGBoost): (link coming soon)
+
+## Modeling Results
 
 | Model | Type | CV Balanced Accuracy | Kaggle LB Score |
 |-------|------|----------------------|-----------------|
