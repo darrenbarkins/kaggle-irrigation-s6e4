@@ -13,21 +13,6 @@ environmental and soil features.
 
 ---
 
-## Repository Structure
-
-```
-kaggle-irrigation-s6e4/
-│
-├── README.md
-├── Kaggle-Homework-Darren Barkins-darrenbarkins.md
-├── notebooks/
-│   └── placeholder.md
-└── data/
-    └── placeholder.md
-```
-
----
-
 ## Notebooks
 
 | Notebook | Description | Link |
