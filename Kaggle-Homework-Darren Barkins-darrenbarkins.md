@@ -94,16 +94,16 @@
 
 ## Modeling Notebooks
 - Bagging (Random Forest): [S6E4 Irrigation Need - Random Forest](https://www.kaggle.com/code/darrenbarkins/s6e4-irrigation-need-random-forest)
-- Boosting (XGBoost): (link coming soon)
+- Boosting (XGBoost): [S6E4 Irrigation Need - XGBoost](https://www.kaggle.com/code/darrenbarkins/s6e4-irrigation-need-xgboost)
 
 ## Modeling Results
 
 | Model | Type | CV Balanced Accuracy | Kaggle LB Score |
 |-------|------|----------------------|-----------------|
 | Random Forest | Bagging | 0.9553 ± 0.0026 | 0.95350 |
-| XGBoost | Boosting | | |
+| XGBoost | Boosting | 0.9620 ± 0.0020 | 0.95987 |
 
-### Random Forest Notes:
+### Random Forest Notes
 - Used 200 trees with balanced class weights to account 
   for the significant imbalance between Low, Medium, and 
   High classes.
@@ -112,9 +112,34 @@
 - Achieved a cross validation balanced accuracy of 0.9553, 
   which is a strong baseline result.
 
-### What worked:
-### What didn't:
-### Bagging vs Boosting comparison:
+### XGBoost Notes
+- Used 300 trees with a learning rate of 0.05 and a max 
+  depth of 6.
+- Cross validation was very consistent across all 5 folds 
+  with a tight spread of ± 0.0020.
+- Achieved a cross validation balanced accuracy of 0.9620, 
+  improving on the Random Forest by about 0.007 points.
+
+### What worked well
+- Both models performed strongly out of the box without 
+  heavy tuning, suggesting the features in this dataset 
+  are informative and well structured.
+- Using balanced class weights in Random Forest and 
+  encoding the target properly for XGBoost both helped 
+  handle the class imbalance effectively.
+
+### What didn't work
+- No major failures at this stage. The models were run 
+  with default to near-default settings, so there is 
+  still room for improvement through tuning.
+
+### Bagging vs Boosting Comparison
+- XGBoost (boosting) outperformed Random Forest (bagging) 
+  on both cross validation and the Kaggle leaderboard. 
+  Boosting's sequential learning approach, where each 
+  tree corrects the mistakes of the previous one, appears 
+  to be better suited to this dataset than bagging's 
+  independent tree voting approach.
 
 ---
 
