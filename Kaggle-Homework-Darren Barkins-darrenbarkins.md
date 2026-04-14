@@ -41,17 +41,72 @@
 ---
 
 ## EDA Notebook
-- Link: [01_EDA.ipynb](./notebooks/01_EDA.ipynb)
-- Key insights: ...
+- Link: [S6E4 Irrigation Need - EDA](https://www.kaggle.com/code/darrenbarkins/eda-irrigation-need-s6e4)
+
+### Key Insights
+
+- The training dataset contains 630,000 rows and 43 features 
+  with no missing values, so no additional cleaning or 
+  imputation was needed before modeling.
+
+- The target classes are not evenly distributed. "Low" 
+  irrigation need is the most common class with 369,917 rows, 
+  "Medium" is noticeably smaller with 239,074 rows, and "High" 
+  is the least represented with only 21,009 rows, creating a 
+  staircase pattern. This is likely why the competition uses 
+  balanced accuracy as its evaluation metric rather than 
+  standard accuracy.
+
+- Most features follow a roughly normal, bell-shaped 
+  distribution. The one exception is "rainfall_mm," which 
+  has a notably different distribution — this is expected, 
+  as rainfall in nature tends to be skewed with occasional 
+  spikes of heavy rain.
+
+- The features most strongly correlated with Irrigation Need 
+  are Wind_Speed_kmh, Temperature_C, Rainfall_mm, and 
+  Electrical_Conductivity. Wind speed being the leading 
+  predictor makes practical sense, as higher winds increase 
+  evaporation and dry out soil more quickly. All correlation 
+  values are relatively low however, suggesting no single 
+  feature drives the prediction on its own.
+
+- The correlation heatmap shows that most features are largely 
+  independent from one another. The only mild exception is a 
+  slight relationship between Soil_Moisture and Organic_Carbon, 
+  which is expected in real-world agricultural data. Overall 
+  this suggests there is little redundancy among the features, 
+  meaning most columns are likely contributing unique 
+  information to the model.
+
+### Most Important Feature
+- Wind_Speed_kmh showed the strongest relationship with 
+  irrigation need, followed closely by Temperature_C.
+
+### Potential Issues
+- The significant class imbalance, particularly the small 
+  number of "High" irrigation need cases, may make it 
+  harder for models to accurately predict that class. 
+  This was addressed in modeling by using balanced 
+  class weights.
 
 ---
 
 ## Modeling
 
-| Model | Type | CV Score | Kaggle LB Score |
-|-------|------|----------|-----------------|
-| Random Forest | Bagging | | |
+| Model | Type | CV Balanced Accuracy | Kaggle LB Score |
+|-------|------|----------------------|-----------------|
+| Random Forest | Bagging | 0.9553 ± 0.0026 | (fill in after submission) |
 | XGBoost | Boosting | | |
+
+### Random Forest Notes:
+- Used 200 trees with balanced class weights to account 
+  for the significant imbalance between Low, Medium, and 
+  High classes.
+- Cross validation was stable across all 5 folds, 
+  suggesting the model is consistent and not overfitting.
+- Achieved a cross validation balanced accuracy of 0.9553, 
+  which is a strong baseline result.
 
 ### What worked:
 ### What didn't:
