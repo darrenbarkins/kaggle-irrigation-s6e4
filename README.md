@@ -2,8 +2,8 @@
 
 ## Overview
 This repository contains my work for the Kaggle Playground 
-Series Season 6 Episode 4 competition — Predicting Irrigation 
-Need. The goal of the competition is to predict whether a 
+Series Season 6 Episode 4 competition (Predicting Irrigation 
+Need). The goal of the competition is to predict whether a 
 field has a Low, Medium, or High irrigation need based on 
 environmental and soil features.
 
