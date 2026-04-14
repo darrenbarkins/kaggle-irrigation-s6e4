@@ -59,7 +59,7 @@
 
 - Most features follow a roughly normal, bell-shaped 
   distribution. The one exception is "rainfall_mm," which 
-  has a notably different distribution — this is expected, 
+  has a notably different distribution. This is expected, 
   as rainfall in nature tends to be skewed with occasional 
   spikes of heavy rain.
 
