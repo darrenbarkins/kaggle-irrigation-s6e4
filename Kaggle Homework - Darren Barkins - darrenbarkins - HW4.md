@@ -122,7 +122,7 @@ features were retained based on their importance scores.
 
 ### Discussion
 
-Three models were trained, Random Forest, XGBoost, and LightGBM — each 
+Three models were trained, Random Forest, XGBoost, and LightGBM, each 
 using their respective imbalance-handling parameters. All three performed 
 closely, with XGBoost and LightGBM tied at around 0.965 validation balanced 
 accuracy.
