@@ -115,9 +115,9 @@ features were retained based on their importance scores.
 
 | Model | Validation Balanced Accuracy | Leaderboard Score |
 |-------|------------------------------|-------------------|
-| Random Forest | 0.9628 | — |
-| XGBoost | 0.9650 | — |
-| LightGBM | 0.9649 | — |
+| Random Forest | 0.9628 | 0.95350 |
+| XGBoost | 0.9650 | 0.95987 |
+| LightGBM | 0.9649 | 0.96791 |
 | **Ensemble (avg)** | **0.9654** | **0.95971** |
 
 ### Discussion
