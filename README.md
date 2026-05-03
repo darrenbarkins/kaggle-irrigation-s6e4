@@ -14,17 +14,19 @@ environmental and soil features.
 
 ## Repository Structure
 
+```
 kaggle-irrigation-s6e4/
 │
 ├── README.md
 ├── Kaggle-Homework-Darren-Barkins-darrenbarkins.md
 └── notebooks/
-├── eda-irrigation-need-s6e4.ipynb
-├── s6e4-irrigation-need-random-forest.ipynb
-├── s6e4-irrigation-need-xgboost.ipynb
-├── s6e4-lightgbm.ipynb
-├── s6e4-catboost.ipynb
-└── s6e4-feature-engineering-ensemble.ipynb
+    ├── eda-irrigation-need-s6e4.ipynb
+    ├── s6e4-irrigation-need-random-forest.ipynb
+    ├── s6e4-irrigation-need-xgboost.ipynb
+    ├── s6e4-lightgbm.ipynb
+    ├── s6e4-catboost.ipynb
+    └── s6e4-feature-engineering-ensemble.ipynb
+```
 
 ---
 
